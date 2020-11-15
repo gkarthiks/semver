@@ -1,0 +1,27 @@
+#!/usr/bin/env bash
+go env
+
+platforms=("linux/amd64" "darwin/amd64" "windows/amd64")
+
+for platform in "${platforms[@]}"
+do
+    platform_split=(${platform//\// })
+    GOOS=${platform_split[0]}
+    GOARCH=${platform_split[1]}
+    output_name="semver"'-'$GOOS'-'$GOARCH
+    if [ $GOOS = "windows" ]; then
+        output_name+='.exe'
+    fi
+
+    TAG=$(echo $GITHUB_REF | grep -o "[0-9][\.].*")
+    echo BuildVersion is: $TAG
+
+    env GOOS=$GOOS GOARCH=$GOARCH go build -ldflags "-X main.BuildVersion=$TAG" -v -o $output_name main.go
+
+    ls -larth
+
+    if [ $? -ne 0 ]; then
+        echo 'An error has occurred! Aborting the script execution...'
+        exit 1
+    fi
+done
