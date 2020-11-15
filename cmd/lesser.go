@@ -62,4 +62,3 @@ var lesserCmd = &cobra.Command{
 func init() {
 	rootCmd.AddCommand(lesserCmd)
 }
-

@@ -28,7 +28,7 @@ import (
 var versionCmd = &cobra.Command{
 	Use:   "version",
 	Short: "Prints the versio of the semver cli",
-	Long: `Prints the version of the semver cli`,
+	Long:  `Prints the version of the semver cli`,
 	Run: func(cmd *cobra.Command, args []string) {
 		fmt.Println(utils.BuildVersion)
 	},
