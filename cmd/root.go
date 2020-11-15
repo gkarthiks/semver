@@ -20,9 +20,9 @@ package cmd
 
 import (
 	"fmt"
+	"github.com/gkarthiks/semver/utils"
 	"github.com/spf13/cobra"
 	"os"
-	"semver/utils"
 )
 
 // rootCmd represents the base command when called without any subcommands

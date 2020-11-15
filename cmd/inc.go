@@ -20,9 +20,9 @@ package cmd
 
 import (
 	"fmt"
+	"github.com/gkarthiks/semver/utils"
 	log "github.com/sirupsen/logrus"
 	"github.com/spf13/cobra"
-	"semver/utils"
 )
 
 // incCmd represents the inc command
