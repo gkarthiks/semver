@@ -20,8 +20,8 @@ package cmd
 
 import (
 	"fmt"
+	"github.com/gkarthiks/semver/utils"
 	"github.com/spf13/cobra"
-	"semver/utils"
 )
 
 // versionCmd represents the version command

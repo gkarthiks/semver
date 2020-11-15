@@ -19,10 +19,10 @@ limitations under the License.
 package cmd
 
 import (
+	"github.com/gkarthiks/semver/utils"
 	log "github.com/sirupsen/logrus"
 	"github.com/spf13/cobra"
 	"os"
-	"semver/utils"
 )
 
 // lesserCmd represents the lesser command

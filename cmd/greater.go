@@ -19,9 +19,9 @@ limitations under the License.
 package cmd
 
 import (
+	"github.com/gkarthiks/semver/utils"
 	"log"
 	"os"
-	"semver/utils"
 
 	"github.com/spf13/cobra"
 )

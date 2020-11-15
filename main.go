@@ -15,7 +15,7 @@ limitations under the License.
 */
 package main
 
-import "semver/cmd"
+import "github.com/gkarthiks/semver/cmd"
 
 // BuildVersion holds the version of the semver
 var BuildVersion = "development"
