@@ -54,7 +54,8 @@ will exits(0)
 		if lhs.Equal(rhs) {
 			os.Exit(0)
 		} else {
-			os.Exit(1)
+			log.Fatal("Not Equal")
+			//os.Exit(1)
 		}
 	},
 }
