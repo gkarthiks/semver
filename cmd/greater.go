@@ -30,7 +30,7 @@ import (
 var greaterCmd = &cobra.Command{
 	Use:   "greater",
 	Short: "Compare two given semver",
-	Long: `Compares two given semver (A, B) and exists with 0 if A is greater than B, -1 if B is greater than A. 
+	Long: `Compares two given semver (A, B) and exists with 0 if A is greater than B, fatal errors if B is greater than A. 
     For example:
 	$ semver greater 1.5.8 1.4.0
 		
@@ -53,7 +53,7 @@ var greaterCmd = &cobra.Command{
 		if lhs.GreaterThan(rhs) {
 			os.Exit(0)
 		} else {
-			os.Exit(1)
+			log.Fatal("Not Greater")
 		}
 	},
 }

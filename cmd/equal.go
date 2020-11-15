@@ -29,7 +29,7 @@ import (
 var equalCmd = &cobra.Command{
 	Use:   "equal",
 	Short: "Compares the equality of two given semver",
-	Long: `Compares the two given semver LHS and RHS and exits(0) if equal and exit(1).
+	Long: `Compares the two given semver LHS and RHS and exits(0) if equal and exits with fatal error if not equal.
 For example:
 
 $ semver equal 1.5.7 1.5.7
@@ -55,7 +55,6 @@ will exits(0)
 			os.Exit(0)
 		} else {
 			log.Fatal("Not Equal")
-			//os.Exit(1)
 		}
 	},
 }
