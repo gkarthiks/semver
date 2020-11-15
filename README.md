@@ -103,7 +103,7 @@ will result in
 To create an alpha tag on an incremented version, 
 
 ```shell script
-semver inc 1.6.0 major alpha
+$ semver inc 1.6.0 major alpha
 ```
 
 will result in 
@@ -113,7 +113,7 @@ will result in
 ``` 
 
 ```shell script
-semver inc 1.6.0-alpha.8 alpha
+$ semver inc 1.6.0-alpha.8 alpha
 ```
 
 will result in 
