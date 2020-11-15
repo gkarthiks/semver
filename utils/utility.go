@@ -46,7 +46,7 @@ func IncrementVersion(parsedSemver *semver.Version, incType string) (semver.Vers
 			}
 			newIncVersion := versionInt + 1
 			VerbosePrintf("New increment version is %v \n", newIncVersion)
-			incAlphaVersion := alphaSplits[0]+"."+strconv.Itoa(newIncVersion)
+			incAlphaVersion := alphaSplits[0] + "." + strconv.Itoa(newIncVersion)
 			alphaIncVersion := fmt.Sprintf("%d.%d.%d-%s", parsedSemver.Major(), parsedSemver.Minor(), parsedSemver.Patch(), incAlphaVersion)
 			VerbosePrintf("New concatenated complete version is %v \n", alphaIncVersion)
 			parsedNewAlphaVersion, err := semver.NewVersion(alphaIncVersion)

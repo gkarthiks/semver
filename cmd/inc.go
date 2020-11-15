@@ -1,6 +1,6 @@
 /*
 Package cmd hold the command logic for equal, greater, inc and lesser
- */
+*/
 /*
 Copyright © 2020 Karthikeyan Govindaraj <github.gkarthiks@gmail.com>
 
@@ -50,7 +50,7 @@ will results in 1.7.0-alpha
 	Run: func(cmd *cobra.Command, args []string) {
 
 		parsedSemver, err := utils.MustParseVersion(args[0])
-		if err!= nil {
+		if err != nil {
 			log.Fatalf("error while parsing the given string %s to semver", args[0])
 		}
 		utils.VerbosePrintf("Parsed given semver string as %v", parsedSemver)
@@ -58,7 +58,7 @@ will results in 1.7.0-alpha
 			utils.VerbosePrintf("Total arguments obtained is 3, proceeding with 3 args logic")
 			if args[2] == "alpha" {
 				if incVersion, err := utils.IncrementVersion(parsedSemver, args[1]); err != nil {
-					log.Fatalf("error occurred while executing increment version, err: %v",err)
+					log.Fatalf("error occurred while executing increment version, err: %v", err)
 				} else {
 					finalIncVersion, err := utils.IncrementVersion(&incVersion, "alpha")
 					if err != nil {
@@ -71,7 +71,7 @@ will results in 1.7.0-alpha
 				log.Fatalf("the third argument must be rc followed by major/minor/patch")
 			}
 		} else if incVersion, err := utils.IncrementVersion(parsedSemver, args[1]); err != nil {
-			log.Fatalf("error occurred while executing increment version, err: %v",err)
+			log.Fatalf("error occurred while executing increment version, err: %v", err)
 		} else {
 			fmt.Println(incVersion)
 		}

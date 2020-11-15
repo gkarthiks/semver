@@ -1,6 +1,6 @@
 /*
 Package cmd hold the command logic for equal, greater, inc and lesser
- */
+*/
 /*
 Copyright © 2020 Karthikeyan Govindaraj <github.gkarthiks@gmail.com>
 
