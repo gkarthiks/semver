@@ -1,5 +1,7 @@
 [![Go Report Card](https://goreportcard.com/badge/github.com/gkarthiks/semver)](https://goreportcard.com/report/github.com/gkarthiks/semver)
 ![language](https://img.shields.io/badge/Language-go-blue.svg)
+![GitHub go.mod Go version](https://img.shields.io/github/go-mod/go-version/gkarthiks/semver)
+![GitHub release (latest by date including pre-releases)](https://img.shields.io/github/v/release/gkarthiks/semver?include_prereleases)
 [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-v2.0%20adopted-ff69b4.svg)](code_of_conduct.md)
 ![GitHub](https://img.shields.io/github/license/gkarthiks/semver)
 [![slack](https://img.shields.io/badge/chat%20on%20slack-semver--cli-blueviolet)](https://container-bb.slack.com/archives/C01F52SBTED)
