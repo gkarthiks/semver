@@ -29,7 +29,7 @@ import (
 var lesserCmd = &cobra.Command{
 	Use:   "lesser",
 	Short: "Compare two given semver",
-	Long: `Compares two given semver (A, B) and exists with 0 if A is lesser than B, -1 if B is lesser than A. 
+	Long: `Compares two given semver (A, B) and exists with 0 if A is lesser than B, fatal errors if B is lesser than A. 
     For example:
 	$ semver lesser 1.5.8 1.4.0
 		
@@ -54,7 +54,7 @@ var lesserCmd = &cobra.Command{
 			log.Print("LHS is lesser than RHS")
 			os.Exit(0)
 		} else {
-			os.Exit(1)
+			log.Fatal("Not Lesser")
 		}
 	},
 }

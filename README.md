@@ -9,7 +9,7 @@
 
 ## Usage
 
-`semver` is very simple to use command line utility. Simply run the following command to see the usage
+`semver` is very simple to use command line utility. Simply run the following command to see the usage,
 
 ```bash
 $ semver
@@ -62,7 +62,7 @@ will result in exit(0) in command line.
 $ semver equal 4.2.7 1.6.8
 ```
 
-will result in exit(1) in command line throwing error in the command line.
+will result in fatal error in command line throwing error in the command line.
 
 ### Compare greaterThan case
 
@@ -76,7 +76,7 @@ Will exit(0) in the command line as safe exit to assure LHS is greater than RHS.
  ```shell script
  $ semver greater 0.4.5 1.3.9
  ```
-Will exit(1) in the command line which errors in the command-line indicating that RHS is greater than LHS.
+Will fatal errors in the command line which errors in the command-line indicating that RHS is greater than LHS.
 
 ### Compare lessThan case
 
@@ -90,7 +90,7 @@ Will exit(0) in the command line as safe exit to assure LHS is lesser than RHS.
  ```shell script
  $ semver lesser 1.4.5 1.3.9
  ```
-Will exit(1) in the command line which errors in the command-line indicating that RHS is lesser than LHS.
+Will fatal errors in the command line which errors in the command-line indicating that RHS is lesser than LHS.
 
 ### To increment the semver
 
